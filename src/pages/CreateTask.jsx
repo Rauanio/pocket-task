@@ -5,9 +5,10 @@ import { addTask } from '../lib/pocketbase';
 import { useInputContext } from '../context/InputContext';
 
 export default function CreateTask() {
-  const types = { placeholder1: 'title', placeholder2: 'description', type: 'text' };
   const { value } = useInputContext();
   const navigate = useNavigate();
+
+  console.log(value);
 
   const handleSubmit = () => {
     if (!value.title || !value.desc) {
@@ -20,12 +21,8 @@ export default function CreateTask() {
 
   return (
     <>
-      <TodoForm
-        handleSubmit={handleSubmit}
-        icon="save_as"
-        text="save"
-        types={types}
-      />
+      <h3 className="mb-3">Create Task</h3>
+      <TodoForm handleSubmit={handleSubmit} />
     </>
   );
 }

@@ -5,7 +5,6 @@ import { useInputContext } from '../context/InputContext';
 import { editTask } from '../lib/pocketbase';
 
 export default function EditTask() {
-  const types = { placeholder1: 'title', placeholder2: 'description', type: 'text' };
   const { value } = useInputContext();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -21,12 +20,8 @@ export default function EditTask() {
 
   return (
     <>
-      <TodoForm
-        handleSubmit={handleSubmit}
-        icon="save_as"
-        text="save"        
-        types={types} 
-      />
+      <h3 className='mb-3'>Edit Task</h3>
+      <TodoForm handleSubmit={handleSubmit} />
     </>
   );
 }

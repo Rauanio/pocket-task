@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TodoForm } from '../components/TodoForm';
+import { AuthForm } from '../components/AuthForm';
 import { useInputContext } from '../context/InputContext';
 import { signUp } from '../lib/pocketbase';
 
@@ -20,7 +20,7 @@ export default function Signup() {
 
   return (
     <>
-      <TodoForm
+      <AuthForm
         handleSubmit={handleSubmit}
         title="Sign up"
         icon="login"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TodoForm } from '../components/TodoForm';
+import { AuthForm } from '../components/AuthForm';
 import { useInputContext } from '../context/InputContext';
 import { login } from '../lib/pocketbase';
 
@@ -19,7 +19,7 @@ export default function Login() {
   };
 
   return (
-    <TodoForm
+    <AuthForm
       handleSubmit={handleSubmit}
       title="Login"
       icon="login"
